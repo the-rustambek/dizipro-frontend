@@ -7,6 +7,12 @@ function App() {
   
   const [active,setActive] = useState(false);
   
+  // let active = false;
+
+  // let setActive = (qiymat) =>{
+  //   active = qiymat
+  // }
+
   const handlePress = () =>{
     setActive(!active);
   }
