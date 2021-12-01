@@ -5,7 +5,7 @@ function App() {
   const isTrue = true;
   return (
     <>
-    <Header>
+    <Header color="red">
       <h1>Salom sayt</h1>
     </Header>
     <div className="App">
@@ -17,9 +17,9 @@ function App() {
 }
 
 
-function Header({children}){
-  console.log(children);
-  return <header>{children}</header>;
+function Header({children,color}){
+  
+  return <header className={color === "red" && "red"}>{children}</header>;
 }
 
 export default App;
