@@ -5,19 +5,30 @@ import {useState} from "react";
 
 function App() {
   
-  const [count,setCount] = useState(1);
+  const [todos,setTodos] = useState([]);
   
 
-  const handlePress = () =>{
-    setCount(count + 1);
-  }
+  const handleSubmit  =   (event) =>{
+    event.preventDefault();
+
+    setTodos([...todos,event.target[0].value]);
+
+    event.target.reset();
+
+  };
  
   return (
     <>
-    <Header />
-    <div className="App"><h2>{count}</h2></div>
+    <ul>
+      {todos.map((todos,i) =>{
+        return <li key = {i} >{todos}</li>;
+      })}
+    </ul>
     
-    <button onClick={handlePress}>Meni bos</button>
+  <form onSubmit={handleSubmit}>
+    <input type="text" />
+    <button >Meni bos</button>
+  </form>
     </>
   );
 }
