@@ -19,7 +19,7 @@ function App() {
 
 function Header({children,color}){
   
-  return <header className={color === "red" && "red"}>{children}</header>;
+  return <header className={color === "red" ? "red": null}>{children}</header>;
 }
 
 export default App;
