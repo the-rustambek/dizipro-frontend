@@ -1,14 +1,22 @@
 import logo from './logo.svg';
 import './App.scss';
 import Header from "./components/Header";
+import {useState} from "react";
 
 function App() {
-  const isTrue = true;
+  
+  const [active,setActive] = useState(false);
+  
+  const handlePress = () =>{
+    setActive(!active);
+  }
+ 
   return (
     <>
     <Header />
-    <div className="App">{isTrue &&  <h2>Salom dunyo</h2>}</div>
+    <div className="App">{active &&  <h2>Salom dunyo</h2>}</div>
     
+    <button onClick={handlePress}>Meni bos</button>
     </>
   );
 }
