@@ -11,6 +11,7 @@ function App() {
       setRaqam(raqam + 1);
     },1000);
   };
+  
 const [raqam,setRaqam] = useState(0);
 
   useEffect(test);
