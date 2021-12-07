@@ -1,23 +1,23 @@
 
 import './App.scss';
-import Header from "./components/Header";
-import {useState} from "react";
 
+import {useState} from "react";
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import Home from "./pages/Home/Home"
+import About from "./pages/About/About"
+import Header from './components/Header';
 
 
 function App() {
   
-const [state, setState]
- = useState(true);
+  return <BrowserRouter>
+    <Header />
+    <Route exact path="/" name="Home" component={Home} />
+    <Route exact path="/about" name="About" component={About} />
 
 
- return (
-   <>
-  {state && <Header />}
-  <button onClick={() => setState(!state)} > Meni bos 
-  </button>
-   </>
- )
+  </BrowserRouter>
+
 
 
 

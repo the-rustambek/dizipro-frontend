@@ -1,13 +1,15 @@
-import { useEffect } from "react/cjs/react.development"
+import { useEffect } from "react";
+import {Link} from "react-router-dom";
+
 
 export default function Header(){
-   useEffect( () =>{
-       console.log("Header yuklandi...");
-
-       return () =>{
-           console.log("Xayr header")
-       }
-   })
+    useEffect( () =>{
+        console.log("Header yuklandi...");
+ 
+        return () =>{
+            console.log("Xayr header")
+        }
+    })
    
     return (
         <header>
@@ -15,13 +17,13 @@ export default function Header(){
         
         <ul>
             <li>
-                <a href="/">Home</a>
+                <Link to="/">Home</Link>
             </li>
             <li>
-                <a href="/about">About</a>
+                <Link to="/about">About</Link>
             </li>
             <li>
-                <a href="/contact">COntact</a>
+                <Link to="/contact">COntact</Link>
             </li>
         </ul>
         
