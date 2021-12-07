@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import ColorContext from "../contexts/ColorContext";
 
 
+
 export default function Header(){
     useEffect( () =>{
         console.log("Header yuklandi...");
