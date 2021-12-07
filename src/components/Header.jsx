@@ -9,8 +9,8 @@ export default function Header(){
  
         return () =>{
             console.log("Xayr header")
-        }
-    })
+        };
+    });
    
     const {color,setColor} = useContext(ColorContext);
     return (
@@ -26,7 +26,7 @@ export default function Header(){
             </li>
             <li>
                 <button onClick={() =>{
-                    setColor("red")
+                    setColor("red");
                 }}>Meni bos</button>
             </li>
         </ul>

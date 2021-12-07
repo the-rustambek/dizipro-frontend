@@ -20,11 +20,13 @@ return(
   <ColorContext.Provider value={{color,setColor}}>
     <ColorContext.Consumer>
       {()=>{
-      <BrowserRouter>
-        <Header />
-        <Route exact path="/" name="Home" component={Home} />
-        <Route exact path="/about" name="About" component={About} />
-      </BrowserRouter>
+     
+     <BrowserRouter>
+     <Header />
+     <Route exact path="/" name="Home" component={Home} />
+     <Route exact path="/about" name="About" component={About} />
+   </BrowserRouter>
+
       }}
     </ColorContext.Consumer>
   </ColorContext.Provider>
