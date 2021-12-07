@@ -1,23 +1,35 @@
-
 import './App.scss';
 
 import {useState} from "react";
-import { BrowserRouter, Routes,Route } from 'react-router-dom';
+import { BrowserRouter,Route } from 'react-router-dom';
 import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
 import Header from './components/Header';
+import ColorContext from './contexts/ColorContext';
 
 
 function App() {
-  
-  return <BrowserRouter>
-    <Header />
-    <Route exact path="/" name="Home" component={Home} />
-    <Route exact path="/about" name="About" component={About} />
+
+const [color, setColor] = useState("white");
 
 
-  </BrowserRouter>
-
+return(
+<div style={{
+    backgroundColor:color,
+  }}>
+  <ColorContext.Provider value={{color,setColor}}>
+    <ColorContext.Consumer>
+      {()=>{
+      <BrowserRouter>
+        <Header />
+        <Route exact path="/" name="Home" component={Home} />
+        <Route exact path="/about" name="About" component={About} />
+      </BrowserRouter>
+      }}
+    </ColorContext.Consumer>
+  </ColorContext.Provider>
+</div>
+)
 
 
 

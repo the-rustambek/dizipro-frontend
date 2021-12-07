@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect,useContext } from "react";
 import {Link} from "react-router-dom";
+import ColorContext from "../contexts/ColorContext";
 
 
 export default function Header(){
@@ -11,6 +12,7 @@ export default function Header(){
         }
     })
    
+    const {color,setColor} = useContext(ColorContext);
     return (
         <header>
             <h1>Dizipro.uz</h1>
@@ -23,7 +25,9 @@ export default function Header(){
                 <Link to="/about">About</Link>
             </li>
             <li>
-                <Link to="/contact">COntact</Link>
+                <button onClick={() =>{
+                    setColor("red")
+                }}>Meni bos</button>
             </li>
         </ul>
         
