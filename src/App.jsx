@@ -6,22 +6,25 @@ import Home from "./pages/Home/Home"
 import About from "./pages/About/About"
 import Header from './components/Header';
 import ColorContext, { ColorProvider } from './contexts/ColorContext';
+import { AuthProvider } from './contexts/AuthContext';
 
 
 function App() {
 
-const [color, setColor] = useState("white");  
+const [color, setColor] = useState("white");
 
 
 return(
-      <ColorProvider>
-     <BrowserRouter>
-     <Header />
-     <Route exact path="/" name="Home" component={Home} />
-     <Route exact path="/about" name="About" component={About} />
-   </BrowserRouter>
+<ColorProvider>
+  <AuthProvider>
+    <BrowserRouter>
+      <Header />
+      <Route exact path="/" name="Home" component={Home} />
+      <Route exact path="/about" name="About" component={About} />
+    </BrowserRouter>
+  </AuthProvider>
 
-   </ColorProvider>
+</ColorProvider>
 
 )
 

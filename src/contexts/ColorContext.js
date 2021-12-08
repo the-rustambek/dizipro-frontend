@@ -1,5 +1,5 @@
 
-import { Children } from "react";
+// import { Children } from "react";
 import { createContext, useState } from "react";
 
 
@@ -16,7 +16,7 @@ export function ColorProvider({children}){
         <ColorContext.Provider value={{color, setColor}}>
             <ColorContext.Consumer>
     {()=> children}
-            </ColorContext.Consumer>
+              </ColorContext.Consumer>
 
         </ColorContext.Provider>
     )
