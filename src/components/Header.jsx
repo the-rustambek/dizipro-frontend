@@ -1,19 +1,15 @@
 import { useEffect,useContext } from "react";
 import {Link} from "react-router-dom";
+import AuthContext from "../contexts/AuthContext";
 import ColorContext from "../contexts/ColorContext";
 
 
 
 export default function Header(){
-    useEffect( () =>{
-        console.log("Header yuklandi...");
- 
-        return () =>{
-            console.log("Xayr header")
-        };
-    });
+
    
-    const {color,setColor} = useContext(ColorContext);
+    const {token,setToken} = useContext(AuthContext);
+
     return (
         <header>
             <h1>Dizipro.uz</h1>
@@ -25,11 +21,17 @@ export default function Header(){
             <li>
                 <Link to="/about">About</Link>
             </li>
-            <li>
-                <button onClick={() =>{
-                    setColor("red");
-                }}>Meni bos</button>
+            {token ? (
+                <li>
+                <Link to="/profile">Profile</Link>
             </li>
+            ) : (
+<li>
+                <Link to="/login">Login</Link>
+            </li>
+            )}
+            
+         
         </ul>
         
         </header>
