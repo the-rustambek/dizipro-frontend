@@ -1,18 +1,17 @@
-$color: rgb(139, 123, 31);
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin:0;
+  padding:0;
+
+}
+
+ul{
+  list-style:none;
+}
 
 body{
-  background-color: $color;
+  background-color:darkgray;
 }
 
 
-.red{
-  font-size: 50px;
-}
-
-.superlink{
-  color: yellowgreen;
-}
-
-.superlink:hover{
-  color: blueviolet;
-}
+$brandColor: #ffedbb;
