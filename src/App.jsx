@@ -17,19 +17,7 @@ const [color, setColor] = useState("white");
 
 
 return(
-<ColorProvider>
-  <AuthProvider>
-    <BrowserRouter>
-      <Header />
-      <Route exact path="/" name="Home" component={Home} />
-      <Route exact path="/login" name="Login" component={Login} />
-      <Route exact path="/about" name="About" component={About} />
-      <ProvidedRoute exact path="/Profile" name="Profile" component={Profile} />
-    </BrowserRouter>
-  </AuthProvider>
- 
-</ColorProvider>
-
+<h1>Hello world</h1>
 )
 
 
