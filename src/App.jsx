@@ -41,7 +41,6 @@ export default App;
 
 function ProvidedRoute(...props){
   const {token,setToken} = useContext(AuthContext);
-
   if(!token){
     return (
       <Redirect to={{
