@@ -8,9 +8,13 @@ export default function Login(){
           <div className="container">
               
             <img src={BeeImage}className="login__be-image" alt="" />
-            <form className="login__form">
+         
+         <div className="login__form-wrapper">
+         <form className="login__form">
                 <h2 className="login__title">Login</h2>
+                
             </form>
+         </div>
             
            
           </div>
