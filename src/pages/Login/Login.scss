@@ -1,20 +1,18 @@
 .login{
-    background-image:#ffedbb;
+    background-color:#ffedbb;
     width:100%;
     height:100vh;
 
     &__main-section{
-        
-        .container{
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-        }
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+  
     }
     &__form{
         width: 35%;
-        border: 2px solid red;
+        border: 1px solid red;
         position: relative;
         
     }
@@ -25,5 +23,9 @@
         height: 100vh;
         top: 0;
         right: 0;
+        z-index: 0;
+    }
+    &__be-image{
+        z-index: 2;
     }
 }

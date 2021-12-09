@@ -5,8 +5,7 @@ export default function Login(){
     return <div className="login">
         <Header />
         <section className="login__main-section">
-          <div className="container">
-              
+         
             <img src={BeeImage}className="login__be-image" alt="" />
          
          <div className="login__form-wrapper">
@@ -15,9 +14,7 @@ export default function Login(){
                 
             </form>
          </div>
-            
-           
-          </div>
+      
               
         </section>
     </div>
