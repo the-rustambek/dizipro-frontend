@@ -1,7 +1,72 @@
-.input{
-    padding: 18px 24px;
-    font-size: 16px;
-    outline: none;
-    width: 100%;
-    // border: 1px solid #bfbbbb;
+.input {
+	padding: 18px 24px;
+	font-size: 16px;
+	outline: none;
+	width: 100%;
+	border: 1px solid #bfbbbb;
+	transition: all 0.3s ease-in-out;
+
+	&.error-input {
+		border-color: red !important;
+		color: red;
+		background-color: rgba(255, 0, 0, 0.03);
+	}
+
+	&::placeholder {
+		color: transparent;
+	}
+
+	+ label[data-placeholder] {
+		pointer-events: none;
+
+		&:after {
+			content: attr(data-placeholder);
+			display: block;
+			position: absolute;
+			top: 50%;
+			color: #bfbbbb;
+			left: 24px;
+			transform: translate(0%, -50%);
+			transition: all 0.3s ease-in-out;
+			padding: 0 0.25rem;
+			background-color: rgba(255, 255, 255, 0);
+		}
+	}
+
+	&.error-input {
+		+ label[data-placeholder] {
+			&:after {
+				color: red;
+			}
+		}
+
+		&:focus,
+		&:valid,
+		&:not(:placeholder-shown) {
+			+ label[data-placeholder] {
+				color: red;
+				&:after {
+					color: red;
+				}
+			}
+		}
+	}
+
+	&:focus,
+	&:valid,
+	&:not(:placeholder-shown) {
+		border-color: #00000077;
+
+		+ label[data-placeholder] {
+			&:after {
+				transform: translate(-5%, -200%) scale(0.9, 0.9);
+				color: #00000077;
+				background-color: rgba(255, 255, 255, 1);
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
 }

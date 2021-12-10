@@ -1,8 +1,9 @@
 import "./Input.scss";
 
 export default function Input (props){
-    return  <label>
-    <input className="input" {...props} />
-    </label>
+    return  <div className="input__wrapper">
+    <input className={`input ${props.className}`} {...props} autoComplete="off" />
+    <label data-placeholder={props.placeholder}></label>
+    </div>
     
 }
