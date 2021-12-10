@@ -15,8 +15,8 @@ return <div className="login">
         <div className="login__form-wrapper">
             <form className="login__form">
                 <h2 className="login__title">Login</h2>
-                <div className="login__form__inputs">
-                    <Input type="email" placeholder="email" required />
+                <div className="login__form__inputs">   
+                    <Input type="email" placeholder="email" required error={true} />
                     <Input type="password" placeholder="password" required />
 
 
